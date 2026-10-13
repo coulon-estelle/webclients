@@ -1,0 +1,72 @@
+
+---
+import { SignIn } from "auth-astro/components";
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connexion — WebClients</title>
+  </head>
+
+  <body>
+    <main>
+      <h1>Bienvenue sur WebClients</h1>
+      <p>Connectez-vous avec votre compte Google pour accéder à votre espace.</p>
+
+      <div class="connexion">
+        <SignIn provider="google" class="google-button">
+          Se connecter avec Google
+        </SignIn>
+      </div>
+    </main>
+  </body>
+</html>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+
+  main {
+    background: white;
+    padding: 48px 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px #00000012;
+    max-width: 400px;
+  }
+
+  h1 {
+    color: #172033;
+    font-size: 26px;
+  }
+
+  p {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+  .connexion :global(button) {
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .connexion :global(button:hover) {
+    background: #1d4ed8;
+  }
+</style>

@@ -4,12 +4,8 @@ import auth from "auth-astro";
 
 export default defineConfig({
   output: "server",
-
   adapter: node({
-    mode: "standalone"
+    mode: "standalone",
   }),
-
-  integrations: [
-    auth()
-  ]
+  integrations: [auth()],
 });
