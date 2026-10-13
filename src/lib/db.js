@@ -1,11 +1,6 @@
 import { Database } from "bun:sqlite";
-import { fileURLToPath } from "node:url";
-import { dirname, join } from "node:path";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const dbPath = join(__dirname, import.meta.env.SQLITE_DB_PATH);
+const dbPath = process.env.SQLITE_DB_PATH || "./data/clients.db";
 
 const db = new Database(dbPath);
 
